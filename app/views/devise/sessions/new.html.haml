@@ -1,0 +1,22 @@
+= render partial: "shared/header"
+.user
+  .user__devise
+    %h2 ログイン
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        = f.label :email
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+      .field
+        = f.label :password
+        %br/
+        = f.password_field :password, autocomplete: "current-password"
+        %br/
+        = f.submit "ログイン", id: 'login_button'
+      
+    = icon('fab', 'facebook-square')
+    = link_to 'Facebookでログイン', user_facebook_omniauth_authorize_path, method: :post
+    %br/
+    = icon('fab', 'google')
+    = link_to 'Googleでログイン', user_google_oauth2_omniauth_authorize_path, method: :post
+

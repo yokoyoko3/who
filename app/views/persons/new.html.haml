@@ -1,0 +1,34 @@
+= render partial: "shared/header"
+.new_people
+  = render partial: "shared/form"
+  -# .new_people__create
+  -#   %l1 リスト登録
+  -#   = form_for @person, url: persons_path, html: {class: "people_new"} do |f|
+  -#     = render 'layouts/error_messages', model: f.object
+  -#     = f.label :name, "本名　又は　ニックネーム"
+  -#     = f.text_field :name
+  -#     %br
+  -#     = f.label :gender, "性別"
+  -#     = f.select :gender, Person.genders.keys, {prompt: '---'}
+  -#     = f.label :age, "年齢"
+  -#     = f.select :age, Person.ages.keys, {prompt: '---'}
+  -#     = f.label :body, "体型"
+  -#     = f.select :body, Person.bodys.keys, {prompt: '---'}
+  -#     %br/
+  -#     = f.label :height, "身長"
+  -#     = f.select :height, Person.heights.keys, {prompt: '---'}
+  -#     = f.label :hair, "髪型"
+  -#     = f.select :hair, Person.hairs.keys, {prompt: '---'}
+  -#     %br
+  -#     #chara-box
+  -#       = f.fields_for :characters do |c|
+  -#         .js-file_group{"data-index" => "#{c.index}"}
+  -#           = c.label :chara, "特徴", class: 'js-file'
+  -#           = c.text_field :chara, class: 'js-file'
+  -#           %input{name: "button", type: "button", value: "追加", id: 'button1', class: 'create_button'  }/
+  -#           %input{name: "button", type: "button", value: "削除", id: 'button2', class: 'create_button' }/
+  -#     %br
+  -#     = f.submit "登録", class: 'create_button' 
+        
+
+    

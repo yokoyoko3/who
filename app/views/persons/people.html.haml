@@ -1,0 +1,6 @@
+= render partial: "shared/header"
+
+.contener
+  .person_box
+    = render partial: "shared/person", collection: @person
+    = paginate(@person)

@@ -1,0 +1,19 @@
+- if user_signed_in?
+  = render partial: "shared/header"
+  .contents
+    .contents__btn
+      .contents__btn--new
+        = link_to 'リスト作成', new_person_path
+      .contents__btn--index
+        = link_to 'リスト一覧', persons_path
+- else
+  = render partial: "shared/header"
+  .login
+    .login__box
+      あの人の名前はなんだっけ・・。<br>なんの話をしたかしら・・・・・。<br>そう思ったら・・・・。
+      %br/
+      = link_to '新規登録', new_user_path
+
+      = link_to 'ログイン', new_user_session_path
+    -# .contents__btn--new
+      

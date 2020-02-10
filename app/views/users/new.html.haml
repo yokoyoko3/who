@@ -1,0 +1,12 @@
+= render partial: "shared/header"
+.user
+  .user__kind
+    .user__kind--meal
+      = icon('fas', 'envelope')
+      = link_to 'メールアドレスで登録', new_user_registration_path
+    .user__kind--facebook
+      = icon('fab', 'facebook-square')
+      = link_to 'Facebookで登録', user_facebook_omniauth_authorize_path, method: :post
+    .user__kind--google
+      = icon('fab', 'google')
+      = link_to 'Googleで登録', user_google_oauth2_omniauth_authorize_path, method: :post

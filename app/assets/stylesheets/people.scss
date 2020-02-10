@@ -1,0 +1,25 @@
+.contener{
+  height: calc(100vh - 150px);
+  width:900px;
+  margin: 0 auto;
+  background-image: url("who.people.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  .person_box{
+    font-size: 17px;
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    padding: 20px;
+    // background-color:  #ffa500;
+    // border-radius: 100px;
+    // margin: 30px;
+    .person-data{
+      background-color: #ffa500;
+      border-radius: 100px;
+      margin: 40px;
+    }
+  }
+}
+

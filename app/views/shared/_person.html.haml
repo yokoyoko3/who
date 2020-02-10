@@ -1,0 +1,21 @@
+.person-data
+  = icon('fas', 'user-alt', class: 'icon')
+  = person.name
+  -# = link_to edit_person_path(person.id) do 
+  -#   = icon('fas', 'cog',class: 'strong')
+  %br
+  年齢:
+  = person.age
+  性別:
+  = person.gender
+  体型:
+  = person.body
+  %br/
+  身長:
+  = person.height
+  髪型:
+  = person.hair
+  %br/
+  特徴:
+  - person.characters.each do |character|
+    = character.chara

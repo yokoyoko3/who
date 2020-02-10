@@ -1,0 +1,9 @@
+.header
+  .header__title
+    = link_to'WHO?', root_path
+  - if user_signed_in?
+    .header__user
+      .header__user--name
+        = "#{current_user.nickname}でログイン中"
+      .header__user--logout
+        = link_to 'ログアウト', destroy_user_session_path, method: :delete
