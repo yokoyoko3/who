@@ -261,7 +261,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET'], scope: 'email', info_fields: 'email', callback_url: "https://who-who-who.herokuapp.com/users/auth/facebook/callback"
-  config.omniauth :google,   ENV['GOOGLE_KEY'],   ENV['GOOGLE_SECRET'],   scope: 'email', info_fields: 'email', callback_url: "https://who-who-who.herokuapp.com/users/auth/google/callback"
+  config.omniauth :google_oauth2,   ENV['GOOGLE_KEY'],   ENV['GOOGLE_SECRET'],   scope: 'email', info_fields: 'email', callback_url: "https://who-who-who.herokuapp.com/users/auth/google/callback"
   # config.omniauth :facebook,ENV['FACEBOOK_CLIENT_ID'],ENV['FACEBOOK_CLIENT_SECRET']
   # config.omniauth :google_oauth2,ENV['GOOGLE_CLIENT_ID'],ENV['GOOGLE_CLIENT_SECRET']
 
