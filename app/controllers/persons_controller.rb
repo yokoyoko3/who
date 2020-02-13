@@ -18,7 +18,6 @@ class PersonsController < ApplicationController
   end
 
   def create
-    binding.pry
     @person = Person.new(person_params)
     if @person.save
       redirect_to root_path

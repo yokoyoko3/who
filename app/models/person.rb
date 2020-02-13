@@ -1,5 +1,5 @@
 class Person < ApplicationRecord
-  has_many :characters
+  has_many :characters, dependent: :destroy
   belongs_to :user
   accepts_nested_attributes_for :characters
   validates :name, :age, :gender, :height, :body, :hair, presence: true
