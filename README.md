@@ -78,6 +78,21 @@ deviseを用いて、ユーザー登録機能の実装を行いました。
 ![image](https://user-images.githubusercontent.com/57942559/74322361-2bfc3100-4dc7-11ea-9d83-4e53eaf15e70.png)
 
 
+## 工夫して実装した機能
+#### ユーザーと紐付いた検索機能の実装
+カレントユーザーが登録したものだけをページネーションを使い、検索結果を表示させるためのインスタンスを生成しようとするも、なかなかうまくいかずにエラーがでる。関連記事を探すがほしい内容のものは見つからず、自力で試行錯誤しなんとか生成が出来たところ。
+
+```controllers/persons_controller.rb
+
+    # params[:q]["user_id_eq"] = current_user.id
+    @q = current_user.persons.ransack(params[:q])
+    @person = @q.result(distinct: true).page(params[:page])
+```
+
+## 今後実装していきたい機能
+#### 編集機能の強化
+登録した人の情報(特徴)を編集する時、情報が登録されていないと編集画面にフォームが出現しないのでそこを改善できるようにする。
+
 ## DB設計図
 ![image](https://user-images.githubusercontent.com/57942559/74400649-ed678480-4e61-11ea-965f-54ca086ffd13.png)
 
